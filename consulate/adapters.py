@@ -38,7 +38,8 @@ def prepare_data(fun):
             if not utils.is_string(kwargs.get('data')):
                 kwargs['data'] = json.dumps(kwargs['data'])
         elif len(args) == 3 and not utils.is_string(args[2]):
-            args = args[0], args[1], json.dumps(args[2])
+            if args[2] is not None:
+                args = args[0], args[1], json.dumps(args[2])
         return fun(*args, **kwargs)
 
     return inner
