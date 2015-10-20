@@ -9,7 +9,7 @@ if sys.version_info < (2, 7, 0):
     install_requires.append('argparse')
 
 setup(name='consulate',
-      version='0.6.0',
+      version='0.6.0+bdclark.dev.1.886864c',
       description="A Client library for the Consul",
       maintainer="Gavin M. Roy",
       maintainer_email="gavinr@aweber.com",
